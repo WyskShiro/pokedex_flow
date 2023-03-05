@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/ListFragment">
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="will.shiro.flowpokedex.list.ListFragment">
+
+        <action
+            android:id="@+id/actionListToDetail"
+            app:destination="@id/DetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="will.shiro.flowpokedex.detail.DetailFragment">
+
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+</navigation>
